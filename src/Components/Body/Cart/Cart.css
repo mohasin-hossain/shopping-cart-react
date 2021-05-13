@@ -52,7 +52,7 @@
     background: #fff;
     width: 40%;
     max-width: 800px;
-    transition: var(--animation);
+    transition: all .4s ease-in-out;
   }
 }
 
@@ -66,7 +66,7 @@
     background: #fff;
     width: 100%;
     max-width: 800px;
-    transition: var(--animation);
+    transition: all .4s ease-in-out;
   }
 }
 
