@@ -165,12 +165,10 @@
 @media only screen and (max-width: 768px) {
   .checkout-popup {
     position: fixed;
-    margin-top: 30rem;
+    margin: 3rem;
     border-radius: 1rem;
-    left: 30%;
-    top: 10%;
     height: 100%;
-    width: 30rem;
+    width: 15rem;
     height: 4rem;
     padding: 1rem;
     z-index: 100;
@@ -187,11 +185,10 @@
     position: fixed;
     margin-top: 10rem;
     border-radius: 1rem;
-    left: 30%;
-    top: 10%;
+    margin: 3rem;
     height: 100%;
     background: #a770ef;
-    width: 30rem;
+    width: 15rem;
     height: 4rem;
     padding: 1rem;
     z-index: 100;
