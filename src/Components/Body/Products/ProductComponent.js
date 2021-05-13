@@ -7,11 +7,11 @@ import {
   decreaseOrder,
   increaseOrder,
 } from "../../../Redux/actionCreators/cartActions";
-import { CheckItemInCart, GetModalState } from "../../Helper/Helper";
+import { CheckItemInCart } from "../../Helper/Helper";
 
 const ProductComponent = (props) => {
-  const show = GetModalState();
-  console.log(props.products)
+  // const show = GetModalState();
+  // console.log(props.products)
   const renderList = props.products.map((product) => {
     const { id, image, title, price } = product;
     let quantity = CheckItemInCart(id);
@@ -32,7 +32,7 @@ const ProductComponent = (props) => {
       </div>
     );
   });
-console.log(renderList)
+// console.log(renderList)
   return <>{renderList}</>;
 };
 

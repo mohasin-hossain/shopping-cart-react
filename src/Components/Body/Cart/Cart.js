@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { clearCart } from "../../../Redux/actionCreators/cartActions";
-import { toggleModal } from "../../../Redux/actionCreators/modalActions";
+// import { toggleModal } from "../../../Redux/actionCreators/modalActions";
 import { LoadCart } from "../../Helper/Helper";
 import "./Cart.css";
 import Summary from "./Summary";
@@ -8,9 +8,9 @@ import CartItem from "./CartItem";
 
 const Cart = ({ show }) => {
   const dispatch = useDispatch();
-  const handleModalToggle = () => {
-    dispatch(toggleModal());
-  };
+  // const handleModalToggle = () => {
+  //   dispatch(toggleModal());
+  // };
   const cart = LoadCart();
   const handleClearCart = () => {
     dispatch(clearCart());
