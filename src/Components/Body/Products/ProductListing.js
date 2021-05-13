@@ -1,30 +1,20 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import ProductComponent from "./ProductComponent";
-import axios from "axios";
-import { setProducts } from "../../../Redux/actionCreators/productActions";
+import LoadItems from "./LoadItems";
+import "./ProductComponent.css";
 
 const ProductListing = () => {
-  const products = useSelector((state) => state);
-  const dispatch = useDispatch();
-
-  const fetchProducts = async () => {
-    const response = await axios
-      .get("https://fakestoreapi.com/products")
-      .catch((error) => {
-        console.log(error);
-      });
-    dispatch(setProducts(response.data));
-  };
-  console.log("Products", products);
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
+  const { isLoading, data } = LoadItems();
   return (
-    <div>
-      <ProductComponent />
-    </div>
+    <>
+      {!isLoading ? (
+        <div className="cards-container">
+          <div className="cards">
+            <ProductComponent products={data.data} />
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 };
 

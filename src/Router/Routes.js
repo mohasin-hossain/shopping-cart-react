@@ -1,19 +1,19 @@
-import React from 'react';
-import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import ProductDetails from '../Components/Body/Products/ProductDetails';
 
-import MainComponent from '../Components/MainComponent';
+import MainComponent from "../Components/MainComponent";
+import Checkout from "../Components/Body/Cart/Checkout";
 
 const Routes = () => {
-    return (
-      <Router>
+  return (
+    <Router>
       <Switch>
-      <Route exact path = '/' component={MainComponent} />
-      {/* <Route exact path='/product/:productId' component={ProductDetails} />  */}
-      {/* <Route exact path ='/checkout' component={Checkout} /> */}
+        <Route exact path="/" component={MainComponent} />
+        <Route exact path="/checkout" component={Checkout} />
       </Switch>
-      </Router>
-    );
+    </Router>
+  );
 };
 
 export default Routes;
